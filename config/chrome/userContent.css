@@ -1,0 +1,87 @@
+/* ---- palette (same as polybar / rofi) ---- */
+@-moz-document url-prefix("about:"), url("about:home"), url("about:newtab") {
+  :root {
+    --bg:   #0a0a0a;
+    --fg:   #d0d0d0;
+    --dim:  #666666;
+    --chip: #1c1c1c;
+    --line: #2a2a2a;
+    --yel:  #e5c07b;
+    --red:  #e06c6c;
+  }
+}
+
+/* ---- new tab / home / blank / private browsing ---- */
+@-moz-document url("about:home"), url("about:newtab"),
+               url("about:blank"), url("about:privatebrowsing") {
+  :root, body {
+    background: #0a0a0a !important;
+    color: #d0d0d0 !important;
+    font-family: monospace !important;
+    --newtab-background-color: #0a0a0a !important;
+    --newtab-background-color-secondary: #1c1c1c !important;
+    --newtab-text-primary-color: #d0d0d0 !important;
+    --newtab-text-secondary-color: #666666 !important;
+    --newtab-border-color: #2a2a2a !important;
+    --newtab-primary-action-background: #e5c07b !important;
+  }
+
+  /* search box: flat, 1px border, like the rofi inputbar */
+  .search-wrapper .search-handoff-button,
+  .search-wrapper input {
+    background: #0a0a0a !important;
+    border: 1px solid #2a2a2a !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    color: #d0d0d0 !important;
+  }
+  .search-wrapper .search-handoff-button:hover,
+  .search-wrapper input:focus {
+    border-color: #e5c07b !important;
+  }
+
+  /* shortcut tiles */
+  .top-site-outer .tile,
+  .top-site-outer .top-site-inner > a .tile {
+    background: #1c1c1c !important;
+    border: 1px solid #2a2a2a !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+  .top-site-outer:hover, .top-site-outer:focus-within {
+    background: #e5c07b !important;
+    border-radius: 0 !important;
+  }
+  .top-site-outer:hover .title, .top-site-outer:focus-within .title { color: #0a0a0a !important; }
+  .top-site-outer .title { color: #666666 !important; }
+
+  /* hide clutter */
+  .logo-and-wordmark, .personalize-button, .weather, .card-outer .story-footer,
+  section[data-section-id="topstories"] { display: none !important; }
+}
+
+/* ---- other about: pages (preferences, addons, etc.) ---- */
+@-moz-document url-prefix("about:") {
+  :root {
+    --in-content-page-background: #0a0a0a !important;
+    --in-content-page-color: #d0d0d0 !important;
+    --in-content-box-background: #1c1c1c !important;
+    --in-content-box-border-color: #2a2a2a !important;
+    --in-content-text-color: #d0d0d0 !important;
+    --in-content-deemphasized-text: #666666 !important;
+    --in-content-border-color: #2a2a2a !important;
+    --in-content-accent-color: #e5c07b !important;
+    --in-content-primary-button-background: #e5c07b !important;
+    --in-content-primary-button-text-color: #0a0a0a !important;
+    --in-content-item-selected: #e5c07b !important;
+    --in-content-item-selected-text: #0a0a0a !important;
+    --in-content-focus-outline-color: #e5c07b !important;
+    --in-content-danger-button-background: #e06c6c !important;
+    --in-content-link-color: #e5c07b !important;
+    font-family: monospace !important;
+  }
+}
+
+/* ---- all pages: thin dark scrollbars, yellow selection (like the launcher) ---- */
+:root { scrollbar-width: thin; scrollbar-color: #2a2a2a #0a0a0a; }
+::selection { background: #e5c07b; color: #0a0a0a; }

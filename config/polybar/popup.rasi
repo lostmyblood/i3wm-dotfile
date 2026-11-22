@@ -1,0 +1,29 @@
+* {
+    bg: #0a0a0a;
+    fg: #d0d0d0;
+    dim: #666666;
+    sel: #1c1c1c;
+    font: "monospace 10";
+    background-color: transparent;
+    text-color: @fg;
+}
+window {
+    location: northeast;
+    anchor: northeast;
+    x-offset: -8px;
+    y-offset: 28px;
+    width: 200px;
+    background-color: @bg;
+    border: 1px;
+    border-color: #2a2a2a;
+    padding: 10px;
+}
+mainbox { children: [message, listview]; spacing: 8px; }
+message { padding: 0; border: 0; }
+textbox { horizontal-align: 0.5; markup: true; }
+listview { lines: 10; fixed-height: false; dynamic: true; scrollbar: false; spacing: 0; border: 0; }
+element { padding: 2px 6px; }
+element-text { horizontal-align: 0.5; text-color: inherit; }
+element selected.normal { background-color: @sel; }
+inputbar { padding: 4px 6px; children: [prompt, entry]; spacing: 8px; }
+prompt { text-color: @dim; }

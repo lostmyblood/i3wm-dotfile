@@ -1,0 +1,8 @@
+configuration {
+    modi: "drun,emoji:~/.config/polybar/scripts/emoji.sh,run";
+    show-icons: false;
+    display-drun: "run";
+    display-emoji: "emoji";
+    display-run: "command";
+    drun-display-format: "{name} [<span alpha='55%'>{generic}</span>]";
+}
